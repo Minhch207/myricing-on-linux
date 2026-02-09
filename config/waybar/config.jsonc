@@ -1,0 +1,133 @@
+{
+    "layer": "top",
+    "margin-top": 5,
+    // Choose the order of the modules
+    /*"modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window",
+        "niri/workspaces"
+    ],*/
+    "modules-center": [
+        "clock",
+        "hyprland/workspaces",
+        "niri/workspaces",
+        "tray",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "battery"
+    ],
+    
+    /*"modules-right": [
+				"tray",       
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "memory",
+        "battery",
+				"clock",
+        "custom/power"
+		],*/
+    "niri/window": {
+      "separate-outputs": false,
+      "tooltip": true
+    },
+    "niri/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "disable-click": false
+      
+    },
+		"hyprland/window": {
+			"separate-outputs": false,
+      "tooltip": true
+		},
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 5,
+        },
+
+    },
+    
+    "tray": {
+        // "icon-size": 21,
+        "icon-size": 16
+    },
+		"clock": {
+        "tooltip-format": "{:%A, %B %d, %Y}",
+        "format": "{:%H:%M}"
+    },
+    "memory":{
+        "format": "  {used}GiB",
+        "tooltip":false
+    },
+    "bluetooth": {
+	      "format":"",
+	      "format-disabled": "", // an empty format will hide the module
+	      "format-connected": "",
+	      "tooltip-format": "{controller_alias}",
+	      "tooltip-format-connected": "{controller_alias}",
+        "on-click": "kitty -e 'bluetui'",
+	      "tooltip-format-enumerate-connected": "{device_alias}"
+    },
+    "battery": {
+        "bat":  "BAT1",
+        "states": {
+            "warning": 20
+        },
+        "format":"{icon}",
+        "tooltip-format": "{capacity}%",
+        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
+				"tooltip": true
+    },
+    "network": {
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤭",
+				"tooltip-format": "Connected to {essid} ({signalStrength}%)",
+        "tooltip": true,
+				"on-click": "kitty -e 'nmtui'"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "{icon}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip":true,
+				"tooltip-format": "{volume}%"
+		},
+    "clock":{
+        //"format": "󰱆 {%d/%m/%Y} | {%H:%M}"",
+        "calendar": {
+            "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+          },
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip":false,
+        "on-click": "nwg-bar"
+    }
+
+
+}

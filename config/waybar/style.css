@@ -1,0 +1,153 @@
+@import "colors.css";
+
+* {
+    font-family:"Rubik","JetBrainsMono Nerd Font Propo",monospace ,Symbols Nerd Font;
+    font-size: 14px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    border-radius: 0px;
+}
+.modules-center {
+  background: @bg0;
+  padding: 6px 12px;
+  border-radius: 28px;
+}
+
+#workspaces {
+  background: transparent;
+  padding: 0;
+  margin: 0 10px 0 10px;
+  border: none;
+  box-shadow: none;
+}
+
+tooltip{
+  background: @bg0;
+  border: 1px solid @bg3;
+  border-radius: 12px;
+}
+
+tooltip label{
+  color: @fg;
+  padding: 3px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+#workspaces button {
+    border-radius: 16px;
+    padding: 0px 5px;
+    margin: 0px 2px;
+    color: @grey0;
+    transition: all 300ms ease-in-out;
+    background: transparent;
+}
+#workspaces button.active {
+    background: linear-gradient(135deg,@color1 0%,@color2 50%,@color3 100%);
+    color: @bg0;
+    min-width: 40px;
+    transition: all 300ms ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: @bg1;
+}
+#workspaces button.urgent {
+    color: @bg0;
+    background-color: @red;
+}
+
+#clock,
+#battery,
+#cpu,
+#bluetooth,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-power,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    background-color: transparent;
+    padding: 0 8px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin:0px 5px;
+}
+
+#clock {
+  color: @fg;
+  margin: 0;
+}
+
+#bluetooth {
+  color: @purple;
+}
+
+#pulseaudio {
+  color: @yellow;
+}
+
+#pulseaudio.muted {
+  color: @bg4;
+}
+
+#network {
+  color: @blue;
+}
+
+#network.disconnected {
+  color: @bg4;
+}
+
+#memory {
+  color: @aqua;
+}
+
+#battery {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
+#custom-power {
+  color: @red;
+  margin-right: 5px;
+}
+#window {
+  color: @grey2;
+}
+#custom-power {
+  color: @red;
+}
+#clock,
+#battery,
+#cpu,
+#bluetooth,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-power,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  color: @color3;
+}

@@ -1,0 +1,40 @@
+{
+    "label" : "lock",
+    "action" : "bash ~/.config/hypr/lock.sh",
+
+    "text" : "Lock",
+    "keybind" : "l"
+}
+
+
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}
+{
+    "label" : "logout",
+    "action" : "sleep 1; hyprctl dispatch exit",
+    "text" : "Logout",
+    "keybind" : "e"
+}
+{
+    "label" : "suspend",
+    "action" : "bash ~/.config/hypr/lock.sh && systemctl suspend",
+    "text" : "Suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "hibernate",
+    "action" : "bash ~/.config/hypr/lock.sh && systemctl hibernate",
+    "text" : "Hibernate",
+    "keybind" : "h"
+}
